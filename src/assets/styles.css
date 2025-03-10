@@ -5,6 +5,7 @@ body {
     background-color: #f0f8ff;
     color: #333;
   }
+  
   header {
     position: sticky;
     background-color: #0077b6;
@@ -29,6 +30,26 @@ body {
     border-radius: 10px;
     margin-right: 10px;
   }
+
+  .typesOfServices{
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  .text-block {
+    flex: 1; 
+    margin-right: 100px;
+    text-align: justify;
+  }
+  .typesOfServices img{
+    width: 100%;
+    max-width: 600px; /* Изображение не превышает ширину контейнера */
+    height: auto; /* Сохраняет пропорции */
+    border-radius: 10px;
+  }
+
   
   nav {
     margin-left: 20px;
