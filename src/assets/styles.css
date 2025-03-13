@@ -39,17 +39,9 @@ body {
     margin-top: 10px;
   }
   .text-block {
-    flex: 1; 
     margin-right: 100px;
     text-align: justify;
   }
-  .typesOfServices img{
-    width: 100%;
-    max-width: 600px; /* Изображение не превышает ширину контейнера */
-    height: auto; /* Сохраняет пропорции */
-    border-radius: 10px;
-  }
-
   
   nav {
     margin-left: 20px;
@@ -60,7 +52,6 @@ body {
     color: white;
     margin: 0 15px;
     text-decoration: none;
-
   }
   section {
     padding: 20px;
@@ -81,7 +72,5 @@ body {
     color: white;
     text-align: center;
     padding: 5px;
-    position: static;
-    bottom: 0;
     width: 100%;
   }
