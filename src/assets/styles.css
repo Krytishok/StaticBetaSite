@@ -1,76 +1,156 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f8ff;
-    color: #333;
-  }
-  
-  header {
-    position: sticky;
-    background-color: #0077b6;
-    color: rgb(255, 145, 0);
-    text-shadow: #333;
-    padding: 10px;
-    top: 0;
-    z-index: 1000;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
-  header section{
-    text-align: left;
-    margin-top: 0;
-    display: flex;
-    align-items: center;
-    padding: 0;
-  }
-  .logo{
-    width: 100%;
-    max-width: 70px;
-    height: auto;
-    border-radius: 10px;
-    margin-right: 10px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f0f8ff;
+  color: #333;
+}
+
+header {
+  position: sticky;
+  background-color: #0077b6;
+  color: rgb(255, 145, 0);
+  text-shadow: #333;
+  padding: 10px;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header section {
+  text-align: left;
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  padding: 0;
+}
+
+.logo {
+  width: 100%;
+  max-width: 70px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 10px;
+}
+
+#services {
+  padding: 20px;
+}
+
+.service {
+  display: flex;
+  align-items: center;
+  gap: 20px; /* Отступ между текстом и картинкой */
+  margin-bottom: 30px; /* Отступ между услугами */
+}
+
+.service-content {
+  flex: 1;
+  max-width: 600px; /* Ограничиваем ширину текстового блока */
+  text-align: justify; /* Выравнивание текста по ширине */
+}
+
+.service-image {
+  width: 100%;
+  max-width: 600px; /* Ограничиваем ширину картинки */
+  height: auto;
+  border-radius: 10px; /* Скругление углов */
+}
+
+nav {
+  margin-left: 20px;
+  padding: 10px;
+  text-align: center;
+  flex-grow: 1;
+}
+
+.menu {
+  display: flex; /* Горизонтальное расположение кнопок */
+  justify-content: space-around; /* Равномерное распределение */
+  list-style: none; /* Убираем маркеры списка */
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  flex-grow: 1;
+  text-align: center;
+  white-space: nowrap; /* Текст всегда на одной строке */
+}
+
+.menu a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 15px 20px;
+  display: block;
+  transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3); /* Рамка */
+  border-radius: 8px; /* Скругление углов */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Тень */
+}
+
+.menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.7); /* Изменение цвета рамки при наведении */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Увеличение тени при наведении */
+}
+
+section {
+  padding: 20px;
+}
+
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  gap: 20px;
+  padding: 0;
+}
+
+.gallery img {
+  width: 100%;
+  max-width: 350px;
+  max-height: 600px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #0077b6;
+  color: white;
+  text-align: center;
+  padding: 5px;
+  width: 100%;
+}
+
+/* Медиа-запрос для адаптивности */
+@media (max-width: 768px) {
+  .menu {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 колонки */
+      gap: 10px; /* Отступ между кнопками */
   }
 
-  .typesOfServices{
-    font-size: 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 10px;
+  .menu li {
+      flex-grow: 0; /* Отключаем растягивание элементов */
   }
-  .text-block {
-    margin-right: 100px;
-    text-align: justify;
+
+  .menu a {
+      padding: 10px 15px; /* Уменьшаем отступы для мобильных устройств */
+      font-size: 16px; /* Уменьшаем размер текста */
   }
-  
-  nav {
-    margin-left: 20px;
-    padding: 10px;
-    text-align: center;
+
+  .service {
+    flex-direction: column; /* Элементы располагаются вертикально */
+    text-align: center; /* Центрируем текст */
   }
-  nav a {
-    color: white;
-    margin: 0 15px;
-    text-decoration: none;
+
+  .service-image {
+    order: 2; /* Картинка после текста */
+    max-width: 100%; /* Картинка на всю ширину */
   }
-  section {
-    padding: 20px;
+
+  .service-content {
+    order: 1; /* Текст перед картинкой */
   }
-  .gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .gallery img {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    border-radius: 10px;
-  }
-  footer {
-    background-color: #0077b6;
-    color: white;
-    text-align: center;
-    padding: 5px;
-    width: 100%;
-  }
+}
