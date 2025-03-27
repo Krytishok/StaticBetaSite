@@ -124,39 +124,35 @@ footer {
 }
 
 /* Медиа-запрос для адаптивности */
-/* Медиа-запрос для адаптивности */
 @media (max-width: 768px) {
-  body {
-    margin: auto;
-    padding: auto;
-  }
   .menu {
       display: grid;
-      grid-template-columns: repeat(2, 1fr); /* 2 колонки */
-      gap: 10px; /* Отступ между кнопками */
+      grid-template-columns: repeat(2, 1fr); 
+      gap: 10px; 
   }
 
   .menu li {
-      flex-grow: 0; /* Отключаем растягивание элементов */
+      flex-grow: 0;
   }
 
   .menu a {
-      padding: 10px 15px; /* Уменьшаем отступы для мобильных устройств */
-      font-size: 16px; /* Уменьшаем размер текста */
+      padding: 10px 15px;
+      font-size: 16px;
   }
 
   .service {
-    flex-direction: column; /* Элементы располагаются вертикально */
-    text-align: center; /* Центрируем текст */
+    flex-direction: column;
+    text-align: center;
   }
 
   .service-image {
     order: 2; /* Картинка после текста */
-    max-width: 100%; /* Картинка на всю ширину */
+    width: 100%; /* Картинка на всю ширину */
   }
 
   .service-content {
     order: 1; /* Текст перед картинкой */
+
   }
   .gallery{
     display: flex;
