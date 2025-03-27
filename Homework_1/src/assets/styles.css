@@ -1,7 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
   background-color: #f0f8ff;
   color: #333;
 }
@@ -39,8 +37,9 @@ header section {
 
 .service {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 20px; /* Отступ между текстом и картинкой */
+  gap: 30px; /* Отступ между текстом и картинкой */
   margin-bottom: 30px; /* Отступ между услугами */
 }
 
@@ -104,6 +103,7 @@ section {
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+  justify-content: center;
   gap: 20px;
   padding: 0;
 }
@@ -124,7 +124,12 @@ footer {
 }
 
 /* Медиа-запрос для адаптивности */
+/* Медиа-запрос для адаптивности */
 @media (max-width: 768px) {
+  body {
+    margin: auto;
+    padding: auto;
+  }
   .menu {
       display: grid;
       grid-template-columns: repeat(2, 1fr); /* 2 колонки */
@@ -153,4 +158,10 @@ footer {
   .service-content {
     order: 1; /* Текст перед картинкой */
   }
+  .gallery{
+    display: flex;
+    justify-content: center;
+  }
+
+  
 }
